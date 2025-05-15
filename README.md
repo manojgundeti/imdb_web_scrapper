@@ -1,6 +1,11 @@
 # IMDb Movie Scraper (Django + Playwright + BeautifulSoup)
 
-This project is a Django-based web scraper that fetches movie data from IMDb based on **genre** or **keyword**. It uses `Playwright` for dynamic page interaction, `BeautifulSoup` for HTML parsing, and Django ORM to store movie data in the database.
+This project is a Django-based web scraper that fetches movie data from IMDb based on **genre** or **keyword**. It uses :
+-  **Playwright (async)** for dynamic page rendering and JavaScript interaction
+-  **BeautifulSoup** for HTML parsing
+-  **Django ORM** for storing data
+-  **Multithreading** to run scraping jobs in the background
+-  **Asynchronous programming** to ensure responsive, non-blocking behavior during scraping
 
 ---
 
@@ -14,6 +19,8 @@ This project is a Django-based web scraper that fetches movie data from IMDb bas
   - Directors / Creators
   - Cast
   - Plot Summary
+- Uses **async/await** with Playwright for efficient page scraping
+- Background job execution with **Python threading** (non-blocking)
 - Tracks job progress using the `ScraperStatus` model (with job UUIDs)
 - Stores movie data in the `Movie` model
 - Batch inserts and intelligently updates existing records
@@ -55,6 +62,7 @@ python manage.py migrate
 ```bash
 python manage.py scrapper --type genre --value action --limit 100
 ```
+this command uses `asyncio` with Playwright and progressbar with tqdm
 
 ---
 
