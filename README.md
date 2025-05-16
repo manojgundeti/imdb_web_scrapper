@@ -119,7 +119,7 @@ python manage.py runserver
 
 ### 3. List Movies
 - **Method:** `GET`
-- **URL:** `/movies/?search=batman&per_page=5`
+- **URL:** `/scraper/movies/?search=batman&per_page=5`
 
 #### Query Parameters:
 - `search` – (optional) search term for title, cast, director, or year
