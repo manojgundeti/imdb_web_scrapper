@@ -101,7 +101,7 @@ python manage.py runserver
 
 ### 2. Get Scraper Job Status
 - **Method:** `GET`
-- **URL:** `/scraper/status/<job_id>/`
+- **URL:** `/scraper/progress/<job_id>/`
 
 #### Example Response:
 ```json
