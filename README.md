@@ -41,8 +41,8 @@ source imdb_env/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Install Playwright Chromium browser
-playwright install chrome
+# Install Playwright browsers
+playwright install
 ```
 
 ---
